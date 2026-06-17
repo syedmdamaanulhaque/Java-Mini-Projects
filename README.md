@@ -116,36 +116,49 @@ Features:
 HOW TO RUN:
 
 > Weather Forecast
+
 cd "Weather Forecast/src"
 javac -cp "../lib/json-20230227.jar" *.java
 java Main
 
+
 > Currency Converter
+
 cd "Currency Converter/src"
 javac *.java
 java CurrencyConverter
 
+
 > E-Commerce Shopping Cart
+
 cd "E-Commerce Shopping Cart/src"
 javac *.java
 java Main
 
+
 > Library Management System
+
 cd "Library Management System/src"
 javac *.java
 java Main
 
+
 > Quiz Game
+
 cd "QuizGame"
 javac QuizGame.java
 java QuizGame
 
+
 > Note-Taking Application
+
 cd "Note-Taking Application"
 javac NoteTakingApp.java
 java NoteTakingApp
 
+
 > Tic Tac Toe Game
+
 cd "TicTacToeGame"
 javac TicTacToeGame.java
 java TicTacToeGame
