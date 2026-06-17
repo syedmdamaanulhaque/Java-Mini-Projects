@@ -45,6 +45,21 @@ An advanced multiplayer Tic Tac Toe game featuring:
 * Multiple rounds
 
 ---------------------------------------------------------------------------------------
+ 
+
+> Currency Converter
+
+A command-line currency converter application that allows users to convert currencies between different countries.
+
+Features:
+* Convert between USD, INR, EUR, GBP, and JPY
+* View supported currencies
+* Menu-driven interface
+* Object-Oriented Design
+
+
+----------------------------------------------------------------------------------------------------------
+
 
 Technologies Used:
 
@@ -54,6 +69,7 @@ Technologies Used:
 * Arrays
 * Loops
 * Methods
+* HashMap
 * Exception Handling
 
 ---------------------------------------------------------------------------------------
