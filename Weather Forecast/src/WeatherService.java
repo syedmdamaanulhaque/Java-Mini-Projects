@@ -1,3 +1,5 @@
+import org.json.JSONObject;
+
 public class WeatherService {
 
     private APIClient apiClient;
@@ -10,32 +12,34 @@ public class WeatherService {
 
         try {
 
-            double latitude = 22.5726;   // Kolkata fixed
-            double longitude = 88.3639;
+            GeoService geoService = new GeoService();
+            double[] coords = geoService.getCoordinates(city);
 
-            String url =
-                    "https://api.open-meteo.com/v1/forecast"
-                            + "?latitude=" + latitude
-                            + "&longitude=" + longitude
-                            + "&current_weather=true";
-
-            String response = apiClient.fetchData(url);
-
-            if (response == null || response.isEmpty()) {
+            if (coords == null) {
+                System.out.println("City not found!");
                 return null;
             }
 
+            double latitude = coords[0];
+            double longitude = coords[1];
 
-            return new WeatherData(
-                    city,
-                    30.0,
-                    70,
-                    12.0,
-                    "Live API Data"
-            );
+            String url = "https://api.open-meteo.com/v1/forecast"
+                    + "?latitude=" + latitude
+                    + "&longitude=" + longitude
+                    + "&current_weather=true";
+
+            String response = apiClient.fetchData(url);
+
+            JSONObject json = new JSONObject(response);
+            JSONObject current = json.getJSONObject("current_weather");
+
+            double temperature = current.getDouble("temperature");
+            double windSpeed = current.getDouble("windspeed");
+
+            return new WeatherData(city, temperature, 0, windSpeed, "Live Weather");
 
         } catch (Exception e) {
-            System.out.println("Error fetching weather");
+            System.out.println("Error: " + e.getMessage());
             return null;
         }
     }

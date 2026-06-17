@@ -9,42 +9,28 @@ public class Main {
 
         while (true) {
 
-            System.out.println("\n===== WEATHER FORECAST APPLICATION =====");
+            System.out.println("===== WEATHER FORECAST APPLICATION =====");
             System.out.println("1. Get Weather");
             System.out.println("2. Exit");
-
-            System.out.print("Enter your choice: ");
+            System.out.print("Enter choice: ");
 
             int choice = sc.nextInt();
             sc.nextLine();
 
-            switch (choice) {
+            if (choice == 1) {
 
-                case 1:
+                System.out.print("Enter city: ");
+                String city = sc.nextLine();
 
-                    System.out.print("Enter City Name: ");
-                    String city = sc.nextLine();
+                WeatherData data = weatherService.getWeather(city);
 
-                    WeatherData weather = weatherService.getWeather(city);
+                if (data != null) {
+                    data.displayWeather();
+                }
 
-                    if (weather != null) {
-                        weather.displayWeather();
-                    }
-                    else {
-                        System.out.println("Weather data not available.");
-                    }
-
-                    break;
-
-                case 2:
-
-                    System.out.println("Thank you!");
-                    sc.close();
-                    return;
-
-                default:
-
-                    System.out.println("Invalid choice!");
+            } else if (choice == 2) {
+                System.out.println("Bye!");
+                break;
             }
         }
     }

@@ -2,4 +2,5 @@
 *.log
 *.tmp
 .vscode/
-*.class
+lib/
+.DS_Store
