@@ -6,10 +6,63 @@ A curated collection of Core Java projects showcasing object-oriented programmin
 
 Projects Included:-
 
+> Weather Forecast Application
+
+A real-time weather application using APIs and JSON parsing.
+
+Features:
+* Real-time weather data using API
+* City-based search
+* JSON parsing
+* Clean CLI interface
+* Wind speed and temperature display
+* Condition analysis (Cold / Pleasant / Hot)
+
+----------------------------------------------------------------------------------------
+
+>  Currency Converter
+
+A command-line currency converter application.
+
+Features:
+* Convert between USD, INR, EUR, GBP, JPY
+* Menu-driven interface
+* Simple and fast conversion logic
+* Clean user input handling
+
+-----------------------------------------------------------------------------------------
+
+>  E-Commerce Shopping Cart
+
+A basic shopping cart simulation system.
+
+Features:
+* Add products
+* Remove products
+* View cart
+* Checkout system
+* Product management system
+
+------------------------------------------------------------------------------------------
+
+> Library Management System
+
+A simple library system using OOP concepts.
+
+Features:
+* Add books
+* Borrow books
+* Return books
+* Search books
+* Track availability
+
+-------------------------------------------------------------------------------------------
+
 > Quiz Game
 
-An interactive quiz application featuring:
+An interactive quiz application featuring.
 
+Features:
 * Player name input
 * 10 multiple-choice questions
 * Score calculation
@@ -21,8 +74,9 @@ An interactive quiz application featuring:
 
 > Note Taking Application
 
-A file-based note manager with:
+A file-based note manager with.
 
+Features:
 * Add notes
 * View notes
 * Delete all notes
@@ -33,8 +87,9 @@ A file-based note manager with:
 
 > Tic Tac Toe Game
 
-An advanced multiplayer Tic Tac Toe game featuring:
+An advanced multiplayer Tic Tac Toe game featuring.
 
+Features:
 * Dynamic board sizes (3×3, 4×4, 5×5)
 * Player names
 * Winner detection
@@ -46,7 +101,6 @@ An advanced multiplayer Tic Tac Toe game featuring:
 
 ---------------------------------------------------------------------------------------
  
-
 > Currency Converter
 
 A command-line currency converter application that allows users to convert currencies between different countries.
@@ -57,52 +111,79 @@ Features:
 * Menu-driven interface
 * Object-Oriented Design
 
-
 ----------------------------------------------------------------------------------------------------------
 
+> Technologies Used:
 
-Technologies Used:
-
-* Java
-* VS Code
+* Java (Core Java)
+* Object-Oriented Programming (OOP)
 * File Handling
-* Arrays
-* Loops
-* Methods
-* HashMap
+* Arrays & Loops
+* Methods & Functions
 * Exception Handling
+* HashMap
+* API Integration (Weather App)
+* JSON Parsing
+* VS Code
 
 ---------------------------------------------------------------------------------------
 
-Folder Structure:
+> Folder Structure:
 
-
-JAVA PROJECTS
+Java-Mini-Projects/
 │
-├── QuizGame
-│     QuizGame.java
+├──  Weather Forecast
+│ ├── src/
+│ │ ├── Main.java
+│ │ ├── WeatherService.java
+│ │ ├── WeatherData.java
+│ │ ├── APIClient.java
+│ │ ├── GeoService.java
+│ │ └── lib/
+│ │ └── json-20230227.jar
 │
-├── Note-Taking Application
-│     NoteTakingApp.java
-│     notes.txt
+├──  Currency Converter
+│ ├── src/
+│ │ └── CurrencyConverter.java
 │
-├── TicTacToeGame
-│     TicTacToeGame.java
+├──  E-Commerce Shopping Cart
+│ ├── src/
+│ │ ├── Main.java
+│ │ ├── Product.java
+│ │ ├── CartItem.java
+│ │ └── ShoppingCart.java
 │
-├── .gitignore
+├──  Library Management System
+│ ├── src/
+│ │ ├── Main.java
+│ │ ├── Book.java
+│ │ └── Library.java
 │
-└── README.md 
+├──  Note-Taking Application
+│ ├── NoteTakingApp.java
+│ └── notes.txt
+│
+├──  Quiz Game
+│ ├── QuizGame.java
+│
+├──  Tic Tac Toe Game
+│ ├── TicTacToeGame.java
+│
+├──  .gitignore
+├──  LICENSE
+└──  README.md
 
 ---------------------------------------------------------------------------------------
 
-Future Enhancements:
+> Future Enhancements:
 
-* GUI using Java Swing
-* Database Integration
-* AI Opponent for Tic Tac Toe
-* Multiplayer Networking
-* User Authentication
-
+* GUI using Java Swing / JavaFX
+* Database integration (MySQL)
+* AI-based Tic Tac Toe opponent
+* Multiplayer online games
+* Authentication system
+* Web-based Java applications
+  
 ---------------------------------------------------------------------------------------
 
 Author-
