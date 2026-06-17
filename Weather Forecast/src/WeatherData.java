@@ -17,6 +17,28 @@ public class WeatherData {
         this.condition = condition;
     }
 
+    // Getters (important for future API parsing)
+    public String getCity() {
+        return city;
+    }
+
+    public double getTemperature() {
+        return temperature;
+    }
+
+    public int getHumidity() {
+        return humidity;
+    }
+
+    public double getWindSpeed() {
+        return windSpeed;
+    }
+
+    public String getCondition() {
+        return condition;
+    }
+
+    // Display method
     public void displayWeather() {
 
         System.out.println("\n========== WEATHER REPORT ==========");

@@ -1,53 +1,42 @@
 public class WeatherService {
 
+    private APIClient apiClient;
+
+    public WeatherService() {
+        apiClient = new APIClient();
+    }
+
     public WeatherData getWeather(String city) {
 
-        city = city.toLowerCase();
+        try {
 
-        switch (city) {
+            double latitude = 22.5726;   // Kolkata fixed
+            double longitude = 88.3639;
 
-            case "kolkata":
-                return new WeatherData(
-                        "Kolkata",
-                        31.5,
-                        78,
-                        12.0,
-                        "Cloudy");
+            String url =
+                    "https://api.open-meteo.com/v1/forecast"
+                            + "?latitude=" + latitude
+                            + "&longitude=" + longitude
+                            + "&current_weather=true";
 
-            case "delhi":
-                return new WeatherData(
-                        "Delhi",
-                        36.0,
-                        52,
-                        9.5,
-                        "Sunny");
+            String response = apiClient.fetchData(url);
 
-            case "mumbai":
-                return new WeatherData(
-                        "Mumbai",
-                        29.0,
-                        85,
-                        15.0,
-                        "Rainy");
-
-            case "chennai":
-                return new WeatherData(
-                        "Chennai",
-                        33.0,
-                        74,
-                        11.0,
-                        "Partly Cloudy");
-
-            case "bangalore":
-                return new WeatherData(
-                        "Bangalore",
-                        26.0,
-                        68,
-                        8.0,
-                        "Pleasant");
-
-            default:
+            if (response == null || response.isEmpty()) {
                 return null;
+            }
+
+
+            return new WeatherData(
+                    city,
+                    30.0,
+                    70,
+                    12.0,
+                    "Live API Data"
+            );
+
+        } catch (Exception e) {
+            System.out.println("Error fetching weather");
+            return null;
         }
     }
 }
